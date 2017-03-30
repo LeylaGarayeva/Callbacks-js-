@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<style>
+	#click{
+			
+			padding: 20px;	
+			background-color: lightblue;
+			width: 80px;
+			color: white;	
+}
+img {
+		width: 80px;
+		height: 80px;
+	}
+		</style>
+	</head>
+	<body>
+		<div id="click">Click me</div>
+		<img src="img.png" alt="" id="images">
+	</body>
+	<script>
+
+var click = document.getElementById('click');
+var images = document.getElementById('images');
+
+
+click.addEventListener('click', function() {
+	click.style.border = "thick solid #0000FF";
+    callback(150, 150, 2000, big_img);
+});
+
+function callback(x, y, s) {
+    var timeout = setTimeout(function() {
+        images.style.width = x;
+        images.style.height = y;
+    }, s);
+}
+
+function big_img() {
+    var set = setTimeout(function() {
+        images.style.width = x;
+        images.style.height = y;
+    },2000);
+}
+	</script>
+</html>
